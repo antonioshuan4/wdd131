@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    background-color: #1f3a5f;
+    color: white;
+    text-align: center;
+    padding: 20px 0 3px 0;
+}
+
+#course-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #39191f;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 70px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN LAYOUT */
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* El título ocupa todo el ancho */
+
+main h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+/* CARDS */
+
+.card {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.card h2 {
+    background-color: #1f3a5f;
+    color: white;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+}
+
+/* IMÁGENES */
+
+.card img {
+    max-width: 20%;
+    display: block;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* LISTA */
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #1f3a5f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
