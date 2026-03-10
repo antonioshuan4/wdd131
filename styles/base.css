@@ -41,8 +41,6 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* MAIN LAYOUT */
-
 main {
     max-width: 1000px;
     margin: 20px auto;
@@ -52,8 +50,6 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
-
-/* El título ocupa todo el ancho */
 
 main h1 {
     grid-column: 1 / -1;
@@ -76,16 +72,12 @@ main h1 {
     text-align: center;
 }
 
-/* IMÁGENES */
-
 .card img {
     max-width: 20%;
     display: block;
     margin: 10px;
     border-radius: 5px;
 }
-
-/* LISTA */
 
 ul {
     padding-left: 20px;
@@ -94,8 +86,6 @@ ul {
 ul li {
     margin-bottom: 8px;
 }
-
-/* FOOTER */
 
 footer {
     background-color: #1f3a5f;
