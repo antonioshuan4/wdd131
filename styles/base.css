@@ -16,7 +16,7 @@ header {
     background-color: #1f3a5f;
     color: white;
     text-align: center;
-    padding: 20px 0 3px 0;
+    padding: 5px;
 }
 
 #course-title {
@@ -26,16 +26,16 @@ header {
 
 nav {
     background-color: #34495e;
-    padding: 10px;
-    display: align-flex;
+    display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    padding: 5px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 70px;
+    margin: 10px 100px;
     font-weight: bold;
 }
 
