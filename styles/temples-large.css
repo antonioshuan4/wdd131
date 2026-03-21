@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+
+  /* esconder botón */
+  #menuBtn {
+    display: none;
+  }
+
+  /* mostrar menú normal */
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* GRID en columnas */
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
