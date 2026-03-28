@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 - Switzerland Page - Gustavo Shuan</title>
+
     <meta name="author" content="Gustavo Shuan">
-    <meta name="description" content="Explore Switzerland's key data including its 41,285 sq km area, population, and current weather conditions. A WDD 131 course assignment by Gustavo Shuan.">
+    <meta name="description" content="Explore Switzerland's key data including its area, population, and weather.">
+
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
@@ -16,14 +18,23 @@
     </header>
 
     <main>
+
+        <!-- HERO -->
         <div class="hero">
             <picture>
-                <source srcset="images/hero-large.webp" media="(min-width: 800px)">
-                <img src="images/country-picture.webp" alt="Beautiful landscape of Switzerland" class="hero-img">
+                <!-- imagen grande -->
+                <source srcset="images/hero-large.webp" media="(min-width: 768px)">
+                <!-- imagen pequeña -->
+                <img src="images/hero-small.webp" alt="Beautiful landscape of Switzerland">
             </picture>
+        </div>
 
+        <!-- CONTENIDO -->
+        <div class="content">
+
+            <!-- DATA -->
             <section class="card data">
-                <h3>Data</h3>
+                <h2>Data</h2>
                 <p><b>Area:</b> 41,285 sq km</p>
                 <p><b>Population:</b> 9,007,798</p>
                 <p><b>Capital:</b> Bern</p>
@@ -31,33 +42,27 @@
                 <p><b>Currency:</b> Swiss Franc</p>
             </section>
 
+            <!-- WEATHER -->
             <section class="card weather">
-            <h3>
-        Weather 
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="weather-icon">
-            <path d="M12 2v2"></path>
-            <path d="m4.93 4.93 1.41 1.41"></path>
-            <path d="M20 12h2"></path>
-            <path d="m19.07 4.93-1.41 1.41"></path>
-            <path d="M15.947 12.65a4 4 0 0 0-5.925-4.128"></path>
-            <path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"></path>
-        </svg>
-    </h3>
-    <p><b>Temperature:</b> <span id="temp">10</span>°C</p>
-    <p><b>Conditions:</b> Partly Cloudy</p>
-    <p><b>Wind:</b> <span id="wind">5</span> km/h</p>
-    <p><b>Wind Chill:</b> <span id="windchill"></span></p>
-</section>
+                <h2 id="weather-title">Weather</h2>
+
+                <!-- SVG (solo mobile) -->
+                <img src="images/weather.svg" alt="Weather Icon" class="weather-icon">
+
+                <p><b>Temperature:</b> <span id="temp">10</span> °C</p>
+                <p><b>Conditions:</b> Partly Cloudy</p>
+                <p><b>Wind:</b> <span id="wind">5</span> km/h</p>
+                <p><b>Wind Chill:</b> <span id="windchill"></span></p>
+            </section>
+
         </div>
+
     </main>
 
-<footer>
-  <div class="linea1">
-    © <span id="currentyear"></span> | Gustavo Shuan | Peru
-  </div>
-  <div class="linea2">
-    Last Modification: <span id="lastModified"></span>
-  </div>
-</footer>
+    <footer>
+        <p>© <span id="currentyear"></span> | Gustavo Shuan | Peru</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
 </body>
 </html>

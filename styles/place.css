@@ -1,20 +1,21 @@
 :root {
-    --primary-color: #D81E05;    /* Rojo de la bandera suiza */
-    --secondary-color: #2c3e50;  /* Azul oscuro para contraste */
-    --accent-color: #f1c40f;     /* Amarillo para iconos/detalles */
+    --primary-color: #D81E05;
+    --secondary-color: #2c3e50;
+    --accent-color: #f1c40f;
     --bg-color: #f9f9f9;
-    --card-bg: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente para las tarjetas */
+    --card-bg: rgba(255, 255, 255, 0.9);
     --text-color: #333;
     --font-main: 'Segoe UI', Arial, sans-serif;
 }
 
-/* Reset básico */
+/* RESET */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* BODY */
 body {
     font-family: var(--font-main);
     background-color: var(--bg-color);
@@ -22,7 +23,7 @@ body {
     line-height: 1.6;
 }
 
-/* Header */
+/* HEADER */
 header {
     background-color: var(--primary-color);
     color: white;
@@ -30,79 +31,54 @@ header {
     text-align: center;
 }
 
-/* --- HERO SECTION (Contenedor principal) --- */
+/* HERO */
 .hero {
-    position: relative; /* Necesario para posicionar las tarjetas encima */
-    display: grid;
-    grid-template-columns: 1fr; /* Una columna en móvil */
+    position: relative;
 }
 
-.hero-img {
+.hero img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 900px;
     display: block;
 }
 
-/* --- TARJETAS (Data y Weather) --- */
+/* TARJETAS */
 .card {
     background-color: var(--card-bg);
     border: 1px solid #ccc;
     padding: 1.5rem;
-    margin: 20px; /* Margen para que no choquen en móvil */
+    margin: 20px;
+    transition: transform 0.3s ease;
 }
 
-.card h3 {
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* HEADINGS */
+.card h2 {
     background-color: var(--secondary-color);
     color: white;
     padding: 10px;
-    margin: -1.5rem -1.5rem 1rem -1.5rem; /* Hace que el título ocupe todo el ancho arriba */
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
+/* TEXTO */
 .card p {
     margin: 8px 0;
     border-bottom: 1px solid #eee;
     padding-bottom: 5px;
 }
 
-/* Estilo para el icono SVG */
+/* ICONO MOBILE */
 .weather-icon {
-    margin-left: 10px;
-    stroke: var(--accent-color);
+    width: 40px;
+    display: block;
+    margin: 10px auto;
 }
 
-/* --- DISEÑO PARA COMPUTADORA (Escritorio) --- */
-@media (min-width: 800px) {
-    .hero {
-        /* En escritorio, las tarjetas flotan sobre la imagen */
-        display: block; 
-    }
-
-    .card {
-        position: absolute; /* Posicionamiento absoluto sobre el hero */
-        width: 300px;
-        margin: 0;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-
-    /* Posicionar tarjeta de DATA arriba a la izquierda */
-    .data {
-        top: 30px;
-        left: 30px;
-    }
-
-    /* Posicionar tarjeta de WEATHER abajo a la derecha */
-    .weather {
-        bottom: 30px;
-        right: 30px;
-    }
-}
-
-/* --- FOOTER --- */
+/* FOOTER */
 footer {
     background-color: var(--primary-color);
     color: white;
@@ -116,4 +92,37 @@ footer {
     font-size: 0.9rem;
     display: block;
     margin-top: 5px;
+}
+
+/* 💻 DESKTOP */
+@media (min-width: 768px) {
+
+    /* TARJETAS SOBRE IMAGEN */
+    .card {
+        position: absolute;
+        width: 280px;
+        margin: 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .data {
+        top: 30px;
+        left: 30px;
+    }
+
+    .weather {
+        bottom: 30px;
+        right: 30px;
+    }
+
+    /* PSEUDO ELEMENTO (OBLIGATORIO) */
+    #weather-title::after {
+        content: " ⛅";
+        margin-left: 8px;
+    }
+
+    /* OCULTAR SVG EN DESKTOP */
+    .weather-icon {
+        display: none;
+    }
 }
