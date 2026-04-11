@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review Submitted</title>
+
+<link rel="stylesheet" href="styles/form.css">
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    let count = Number(localStorage.getItem("reviewCount")) || 0;
+    count++;
+
+    localStorage.setItem("reviewCount", count);
+
+    document.getElementById("count").textContent = count;
+
+    // Footer dinámico
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
+});
+</script>
+
+</head>
+
+<body>
+
+<main style="text-align:center; padding:50px;">
+    <h1>Thank You!</h1>
+    <p>Your review has been submitted.</p>
+    <p>Total Reviews Submitted: <strong id="count"></strong></p>
+
+    <a href="form.html">Submit another review</a>
+</main>
+
+<footer>
+    <p>© <span id="year"></span> Gustavo Shuan - Perú</p>
+    <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>

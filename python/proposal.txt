@@ -1,0 +1,39 @@
+Project Proposal
+
+Project Title: Personal Expense Tracker
+
+Problem Description:
+Many people have difficulty managing their daily expenses and keeping track of how much money they spend. Without proper tracking, it is easy to overspend and lose control of finances.
+
+Program Description:
+I will create a Python program that allows users to record their expenses, view all recorded expenses, and calculate the total amount spent. The program will help users better manage their money by organizing their expenses in a simple and clear way.
+
+Features:
+
+Add a new expense (name and amount)
+Display all expenses
+Calculate total expenses
+Save expenses to a file
+Load expenses from a file
+
+Functions Plan:
+The program will include multiple functions, such as:
+
+A function to add expenses
+A function to display expenses
+A function to calculate totals
+A function to save data to a file
+A function to load data from a file
+
+Each function will perform a single task and return results when appropriate.
+
+Use of Python Concepts:
+This program will use:
+
+Functions with parameters and return values
+Lists to store expense data
+File handling to save and load data
+Loops and conditionals for program flow
+
+Testing Plan:
+I will write test functions to test at least two functions, such as the total calculation and file reading functions. I will use pytest to verify that the functions return correct results.
